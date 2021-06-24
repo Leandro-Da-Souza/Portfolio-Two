@@ -3,12 +3,13 @@ import React from 'react'
 import { ColorModeSwitcher } from '../ColorModeSwitcher.js';
 import { Link as ReachLink } from 'react-router-dom';
 
+
 const Header = () => {
     const { colorMode } = useColorMode()
     
     const getBorderBottomColor = () => {
         if(colorMode === 'light') {
-            return theme.colors.gray[800];
+            return theme.colors.red[200];
         } else {
             return "#fbfbfb"
         }
