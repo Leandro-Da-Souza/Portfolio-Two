@@ -2,7 +2,7 @@ import "@fontsource/limelight"
 import "@fontsource/montserrat"
 
 import React from 'react';
-import { ChakraProvider, CSSReset } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 import Header from './components/Header';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import theme from './constants/theme';
@@ -13,7 +13,6 @@ import Contact from './pages/Contact';
 
 
 function App() {
-  console.log(theme)
   return (
     <ChakraProvider theme={theme}>
       <Router>
