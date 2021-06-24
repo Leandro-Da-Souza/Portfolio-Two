@@ -17,7 +17,7 @@ const Home = () => {
     return (
         <Flex width="100vw" height="90vh" justify="space-evenly" align="center" flexDir="column">
             <Box>
-                <Image boxSize={['230', '340', '390']} src={image} alt="Leandro Da Souza" objectFit="cover" borderRadius="full"/>
+                <Image boxSize={['230', '340', '390']} src={image} alt="Leandro Da Souza" objectFit="cover" borderRadius="full" loading="lazy"/>
             </Box>
             <Box textAlign="center">
                 <Heading p="1" fontSize={{base: 'lg', md: 'lg', lg: '2xl'}}>Hi! i'm <Text as="span" color="white">Leandro Da Souza</Text> and I am a Frontend Developer!</Heading>
