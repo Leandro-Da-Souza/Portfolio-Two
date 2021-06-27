@@ -1,7 +1,6 @@
 import React from 'react'
 import { Flex, Text, Heading } from '@chakra-ui/layout'
-import { Image } from "@chakra-ui/react"
-import { Box } from '@chakra-ui/react';
+import { Image, Icon, Box } from "@chakra-ui/react"
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import image from '../static/images/me.jpg'
 
@@ -21,11 +20,11 @@ const Home = () => {
             </Box>
             <Box textAlign="center">
                 <Heading p="1" fontSize={{base: 'lg', md: 'lg', lg: '2xl'}}>Hi! i'm <Text as="span" color="white">Leandro Da Souza</Text> and I am a Frontend Developer!</Heading>
-                <Text>Currently Looking for Work.</Text>
+                <Text>Currently looking for work!</Text>
             </Box>
             <Flex w="30vw" justify="space-between" >
-                <FaGithub data-url="https://github.com/leandro-da-souza" size={40} onClick={handleClick}/>
-                <FaLinkedin data-url="https://linkedin.com/in/leandro-da-souza"size={40} onClick={handleClick}/>
+                <Icon as={FaGithub} data-url="https://github.com/leandro-da-souza" boxSize={{base: 39, lg: 50}} onClick={handleClick} cursor="pointer"/>
+                <Icon as={FaLinkedin} data-url="https://linkedin.com/in/leandro-da-souza" boxSize={{base: 37, lg: 50}} onClick={handleClick} cursor="pointer"/>
             </Flex>
         </Flex>
     )
