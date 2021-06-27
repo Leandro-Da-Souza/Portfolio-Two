@@ -1,7 +1,6 @@
 import React from 'react'
 import { Flex, Text, Heading } from '@chakra-ui/layout'
-import { Image } from "@chakra-ui/react"
-import { Box } from '@chakra-ui/react';
+import { Image, Icon, Box } from "@chakra-ui/react"
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import image from '../static/images/me.jpg'
 
@@ -24,8 +23,9 @@ const Home = () => {
                 <Text>Currently looking for work!</Text>
             </Box>
             <Flex w="30vw" justify="space-between" >
-                <FaGithub data-url="https://github.com/leandro-da-souza" size={40} onClick={handleClick} cursor="pointer"/>
-                <FaLinkedin data-url="https://linkedin.com/in/leandro-da-souza"size={40} onClick={handleClick} cursor="pointer" />
+                <Icon as={FaGithub} data-url="https://github.com/leandro-da-souza" boxSize={{base: 39, lg: 50}} onClick={handleClick} cursor="pointer"/>
+                <Icon as={FaLinkedin} data-url="https://linkedin.com/in/leandro-da-souza" boxSize={{base: 37, lg: 50}} onClick={handleClick} cursor="pointer"/>
+                {/* <FaLinkedin data-url="https://linkedin.com/in/leandro-da-souza" boxSize={40} onClick={handleClick} cursor="pointer" /> */}
             </Flex>
         </Flex>
     )
