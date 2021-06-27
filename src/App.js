@@ -13,6 +13,7 @@ import Contact from './pages/Contact';
 
 
 function App() {
+  console.log(theme)
   return (
     <ChakraProvider theme={theme}>
       <Router>

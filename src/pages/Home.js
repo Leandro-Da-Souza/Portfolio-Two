@@ -25,7 +25,6 @@ const Home = () => {
             <Flex w="30vw" justify="space-between" >
                 <Icon as={FaGithub} data-url="https://github.com/leandro-da-souza" boxSize={{base: 39, lg: 50}} onClick={handleClick} cursor="pointer"/>
                 <Icon as={FaLinkedin} data-url="https://linkedin.com/in/leandro-da-souza" boxSize={{base: 37, lg: 50}} onClick={handleClick} cursor="pointer"/>
-                {/* <FaLinkedin data-url="https://linkedin.com/in/leandro-da-souza" boxSize={40} onClick={handleClick} cursor="pointer" /> */}
             </Flex>
         </Flex>
     )

@@ -18,7 +18,7 @@ const Portfolio = () => {
                 >
                     <Image src={Img1} w={{base: '75%', md: '25%', lg:"25%"}} loading="lazy"></Image>
                     <Box alignSelf={{base: 'center', lg:"center"}} w={{ base: '100%',lg:"50%"}}>
-                        <List paddingLeft={{base: '2%'}} paddingTop={{base: '2%'}}>
+                        <List paddingLeft={{base: '2%'}} paddingTop={{base: '2%'}} spacing="0.3">
                             <ListItem><Text color="white" as="span" fontSize="1.1rem">Name:</Text> Plantera Mera</ListItem>
                             <ListItem><Text color="white" as="span" fontSize="1.1rem">Desc:</Text> A website/reference page for a fictious company me and a classmate made for our finals project.</ListItem>
                             <ListItem><Text color="white" as="span" fontSize="1.1rem">Stack:</Text>  Vue, Sass, Firebase</ListItem>
@@ -34,7 +34,7 @@ const Portfolio = () => {
                 >
                     <Image src={Img4} loading="lazy" w={{base: '75%', md: '25%', lg:"25%"}}></Image>
                     <Box alignSelf={{base: 'center'}} w={{ base: '100%',lg:"50%"}}>
-                        <List paddingLeft={{base: '2%'}} paddingTop={{base: '2%'}}>
+                        <List paddingLeft={{base: '2%'}} paddingTop={{base: '2%'}} spacing="0.3">
                             <ListItem><Text color="white" as="span" fontSize="1.1rem">Name:</Text> Leandro Da Souza</ListItem>
                             <ListItem><Text color="white" as="span" fontSize="1.1rem">Desc:</Text> First rendition of my portfolio page, wasn't satisfied so remade it.</ListItem>
                             <ListItem><Text color="white" as="span" fontSize="1.1rem">Stack:</Text> React, CSS, Styled Components</ListItem>
@@ -50,7 +50,7 @@ const Portfolio = () => {
                 >
                     <Image src={Img5} loading="lazy" w={{base: '75%', md: '25%', lg:"25%"}}></Image>
                     <Box alignSelf="center" w={{ base: '100%',lg:"50%"}}>
-                        <List paddingLeft={{base: '2%'}} paddingTop={{base: '2%'}}>
+                        <List paddingLeft={{base: '2%'}} paddingTop={{base: '2%'}} spacing="0.3">
                             <ListItem><Text color="white" as="span" fontSize="1.1rem">Name:</Text> Flickr API Search</ListItem>
                             <ListItem><Text color="white" as="span" fontSize="1.1rem">Desc:</Text> A photo gallery project, school assignment to practice API calls.</ListItem>
                             <ListItem><Text color="white" as="span" fontSize="1.1rem">Stack:</Text> Vanilla JS, CSS</ListItem>
