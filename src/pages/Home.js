@@ -21,11 +21,11 @@ const Home = () => {
             </Box>
             <Box textAlign="center">
                 <Heading p="1" fontSize={{base: 'lg', md: 'lg', lg: '2xl'}}>Hi! i'm <Text as="span" color="white">Leandro Da Souza</Text> and I am a Frontend Developer!</Heading>
-                <Text>Currently Looking for Work.</Text>
+                <Text>Currently looking for work!</Text>
             </Box>
             <Flex w="30vw" justify="space-between" >
-                <FaGithub data-url="https://github.com/leandro-da-souza" size={40} onClick={handleClick}/>
-                <FaLinkedin data-url="https://linkedin.com/in/leandro-da-souza"size={40} onClick={handleClick}/>
+                <FaGithub data-url="https://github.com/leandro-da-souza" size={40} onClick={handleClick} cursor="pointer"/>
+                <FaLinkedin data-url="https://linkedin.com/in/leandro-da-souza"size={40} onClick={handleClick} cursor="pointer" />
             </Flex>
         </Flex>
     )
