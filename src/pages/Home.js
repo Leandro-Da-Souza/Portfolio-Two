@@ -20,7 +20,7 @@ const Home = () => {
             </Box>
             <Box textAlign="center">
                 <Heading p="1" fontSize={{base: 'lg', md: 'lg', lg: '2xl'}}>Hi! i'm <Text as="span" color="white">Leandro Da Souza</Text> and I am a Frontend Developer!</Heading>
-                <Text>Currently looking for work!</Text>
+                <Text>Currently employed at Blueberry Innovations!</Text>
             </Box>
             <Flex w="30vw" justify="space-between" >
                 <Icon as={FaGithub} data-url="https://github.com/leandro-da-souza" boxSize={{base: 39, lg: 50}} onClick={handleClick} cursor="pointer"/>
