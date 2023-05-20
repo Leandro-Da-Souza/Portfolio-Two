@@ -13,8 +13,8 @@ const styles = {
 
 const theme = extendTheme({
     fonts: {
-        body: 'Montserrat',
-        heading: 'Limelight'
+        body: 'JetBrains Mono',
+        heading: 'JetBrains Mono'
     },
     colors: {
         custom: {

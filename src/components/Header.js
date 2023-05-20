@@ -11,7 +11,7 @@ const Header = () => {
         if(colorMode === 'light') {
             return theme.colors.red[200];
         } else {
-            return "#fbfbfb"
+            return '#33FF33';
         }
     }
 

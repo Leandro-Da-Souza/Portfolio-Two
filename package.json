@@ -6,6 +6,7 @@
     "@chakra-ui/react": "^1.0.0",
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
+    "@fontsource/jetbrains-mono": "^4.5.12",
     "@fontsource/limelight": "^4.4.5",
     "@fontsource/montserrat": "^4.4.5",
     "@testing-library/jest-dom": "^5.9.0",
