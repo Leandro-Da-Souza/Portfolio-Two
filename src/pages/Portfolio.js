@@ -2,7 +2,6 @@ import React from 'react'
 import { Flex, Box, Heading, Link, List, ListItem, Text } from '@chakra-ui/layout'
 import { Image } from '@chakra-ui/react';
 import Img1 from '../static/images/portfolio/one.png'
-import Img4 from '../static/images/portfolio/four.png'
 import Img5 from '../static/images/portfolio/five.png'
 
 const Portfolio = () => {
