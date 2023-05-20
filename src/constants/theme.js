@@ -5,8 +5,8 @@ import { mode } from "@chakra-ui/theme-tools";
 const styles = {
     global: props => ({
       body: {
-        color: mode('red.500', 'white')(props),
-        bg: mode('custom.blue', 'red.500')(props),
+        color: mode('red.500', 'custom.hackerGreen')(props),
+        bg: mode('custom.blue', 'black')(props),
       },
     }),
   };
@@ -18,7 +18,8 @@ const theme = extendTheme({
     },
     colors: {
         custom: {
-            blue: '#004151'
+            blue: '#004151',
+            hackerGreen: '#33FF33'
         }
     },
     styles,
