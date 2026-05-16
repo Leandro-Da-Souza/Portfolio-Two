@@ -1,41 +1,65 @@
-import { Grid, GridItem, Link, HStack, useColorMode, theme } from '@chakra-ui/react';
+import { Box, Flex, Link, HStack } from '@chakra-ui/react';
 import React from 'react'
-import { ColorModeSwitcher } from '../ColorModeSwitcher.js';
 import { Link as ReachLink } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 
 const Header = () => {
-    const { colorMode } = useColorMode()
-    
-    const getBorderBottomColor = () => {
-        if(colorMode === 'light') {
-            return theme.colors.red[200];
-        } else {
-            return '#33FF33';
-        }
-    }
+    const location = useLocation()
+    const activeColor = 'teal.600'
+
+    const links = [
+        { label: 'Home', path: '/' },
+        { label: 'About', path: '/about' },
+        { label: 'Contact', path: '/contact' },
+    ]
 
     return (
-        <Grid w="100vw" h="10vh" gridRow="repeat(2, 1fr)">
-                <HStack 
-                    fontFamily="heading" 
-                    justify="space-evenly" 
-                    w="100vw"
-                    spacing="4"
-                    p="2"
-                    paddingTop={4}
-                    fontSize="1.1rem"
-                    borderBottom={`1px solid ${getBorderBottomColor()}`}
+        <Box
+            as="header"
+            position="sticky"
+            top="0"
+            zIndex="10"
+            bg="rgba(247,250,252,0.9)"
+            borderBottom="1px solid"
+            borderColor="gray.200"
+            backdropFilter="blur(14px)"
+        >
+            <Flex
+                maxW="1100px"
+                mx="auto"
+                px={{ base: 4, sm: 5, md: 8 }}
+                py="3"
+                align="center"
+                justify="space-between"
+                gap="3"
+                flexWrap="wrap"
+            >
+                <Link
+                    as={ReachLink}
+                    to="/"
+                    fontWeight="700"
+                    letterSpacing="0"
+                    _hover={{ textDecoration: 'none', color: activeColor }}
                 >
-                    <Link as={ReachLink} to="/">Home</Link>
-                    <Link as={ReachLink} to="/about">About</Link>
-                    <Link as={ReachLink} to="/portfolio">Portfolio</Link>
-                    <Link as={ReachLink} to="/contact">Contact</Link>
+                    Leandro
+                </Link>
+                <HStack spacing={{ base: 3, sm: 4, md: 6 }} fontSize={{ base: 'sm', md: 'md' }}>
+                    {links.map(link => (
+                        <Link
+                            key={link.path}
+                            as={ReachLink}
+                            to={link.path}
+                            color={location.pathname === link.path ? activeColor : 'inherit'}
+                            fontWeight={location.pathname === link.path ? '700' : '500'}
+                            _hover={{ color: activeColor, textDecoration: 'none' }}
+                        >
+                            {link.label}
+                        </Link>
+                    ))}
                 </HStack>
-                <GridItem justifySelf="center" marginTop={2} marginBottom={2}>
-                    <ColorModeSwitcher />
-                </GridItem>
-        </Grid>
+            </Flex>
+        </Box>
     )
 }
 

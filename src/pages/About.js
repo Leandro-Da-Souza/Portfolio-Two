@@ -1,29 +1,56 @@
 import React from 'react'
-import { Flex, Text, Heading, HStack, Link} from '@chakra-ui/layout'
+import { Box, Flex, SimpleGrid, Stack, Text, Heading, Link } from '@chakra-ui/react'
 import { Link as ReachLink } from 'react-router-dom';
 import { FaHtml5, FaCss3 } from 'react-icons/fa'
-import { SiJavascript, SiPhp } from 'react-icons/si'
+import { SiJavascript, SiPhp, SiReact, SiVueDotJs } from 'react-icons/si'
 import { Icon } from "@chakra-ui/react"
 
 const About = () => {
-    const calculateAge = (birthday) => {
-        var ageDifMs = Date.now() - birthday.getTime();
-        var ageDate = new Date(ageDifMs); // miliseconds from epoch
-        return Math.abs(ageDate.getUTCFullYear() - 1970);
-    }
+    const strengths = [
+        'Frontend interfaces that stay usable under real content',
+        'Styling systems built with CSS, Sass and component libraries',
+        'API-driven projects and full-stack collaboration with PHP',
+        'Calm delivery in agile teams, from idea to shipped feature',
+    ]
 
     return (
-        <Flex w="100vw" flexDirection="column" height="80vh" align="center" justify="space-evenly" paddingLeft="3%" paddingRight="2%"> 
-            <Flex w={{base: "100%", md: '90%', lg: '90%'}} flexDirection={{ base: 'row', md: 'row', lg: 'column'}}>
-                <Heading flex="1">A little bit about <Text as="span" color="white">me.</Text></Heading>
-                <Text flex="2" fontSize="15">A {calculateAge(new Date('1992-03-04'))} year old man born in Stockholm, Sweden. Started with web development as a hobby in 2016 and began a formal education with workplace experience from 2018 - 2021. Employed by Blueberry Innovations since 2021 working with technologies such as PHP, JS, CSS in Agile teams and more. I have passion for coding and learning as much as possible, and on my free time like to workout and play guitar. Check out my <Link as={ReachLink} to="/portfolio" color="white">Portfolio</Link> for an excerpt of the work i've done or <Link as={ReachLink} to="/contact" color="white">Contact</Link> if you want to get in touch!</Text>
-            </Flex>
-            <HStack>
-                <Icon as={SiJavascript} boxSize={{base: 35, lg: 50 }}/>
-                <Icon as={FaHtml5} boxSize={{base: 35, lg: 50 }}/>
-                <Icon as={FaCss3} boxSize={{base: 35, lg: 50 }}/>
-                <Icon as={SiPhp} boxSize={{base: 35, lg: 50 }}></Icon>
-            </HStack>
+        <Flex as="main" minH={{ base: 'auto', lg: 'calc(100vh - 65px)' }} px={{ base: 4, sm: 5, md: 8 }} py={{ base: 8, md: 16 }}>
+            <Stack maxW="1100px" mx="auto" spacing={{ base: 8, lg: 14 }}>
+                <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={{ base: 8, lg: 14 }} alignItems="start">
+                    <Box>
+                        <Text color="teal.600" fontWeight="700" mb="3">About</Text>
+                        <Heading as="h1" fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }} lineHeight="1.1">
+                            A developer who likes clean interfaces and clear code.
+                        </Heading>
+                    </Box>
+                    <Stack spacing="5" color="gray.600" fontSize={{ base: 'md', md: 'lg' }} lineHeight="1.8">
+                        <Text>
+                            I am a Stockholm-born frontend developer who started building for the web as a hobby in 2016, then turned it into a professional path through formal education and workplace experience from 2018 to 2021.
+                        </Text>
+                        <Text>
+                            Since 2021 I have worked at Blueberry Innovations with PHP, JavaScript, CSS and agile teams. I enjoy learning, simplifying rough edges and turning ideas into interfaces people can actually use.
+                        </Text>
+                        <Text>
+                            Right now I am keeping this site intentionally lightweight. Head to <Link as={ReachLink} to="/contact" color="teal.600">contact</Link> if you want to talk.
+                        </Text>
+                    </Stack>
+                </SimpleGrid>
+                <SimpleGrid columns={{ base: 1, md: 2 }} spacing="4">
+                    {strengths.map(strength => (
+                        <Box key={strength} bg="white" border="1px solid" borderColor="gray.200" borderRadius="8px" p="5">
+                            <Text>{strength}</Text>
+                        </Box>
+                    ))}
+                </SimpleGrid>
+                <Flex gap={{ base: 5, md: 8 }} justify="center" color="teal.600" flexWrap="wrap">
+                    <Icon as={SiJavascript} boxSize={{base: 9, lg: 12 }}/>
+                    <Icon as={SiReact} boxSize={{base: 9, lg: 12 }}/>
+                    <Icon as={SiVueDotJs} boxSize={{base: 9, lg: 12 }}/>
+                    <Icon as={FaHtml5} boxSize={{base: 9, lg: 12 }}/>
+                    <Icon as={FaCss3} boxSize={{base: 9, lg: 12 }}/>
+                    <Icon as={SiPhp} boxSize={{base: 9, lg: 12 }} />
+                </Flex>
+            </Stack>
         </Flex>
     )
 }

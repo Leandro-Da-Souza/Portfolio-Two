@@ -1,25 +1,31 @@
 import React from 'react'
-import { Flex, HStack } from '@chakra-ui/react';
+import { Button, Flex, Stack, Text } from '@chakra-ui/react';
 import { Heading, Link } from '@chakra-ui/layout';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import { Icon } from '@chakra-ui/react';
 
 const Contact = () => {
-    const handleClick = e => {
-        if(e.target.tagName === 'path') {
-            window.open(e.nativeEvent.target.parentElement.dataset.url, '_target')
-        } else {
-            window.open(e.target.dataset.url, '_target')
-        }
-    }
-
     return (
-        <Flex w="100vw" height="70vh" justify="center" align="center" flexDir="column">
-            <Heading fontSize="1.2rem" marginBottom="3%" padding={{base: '5%'}}>I'm available at <Link color="white" href="mailto:dasouza.leandro@gmail.com">dasouza.leandro@gmail.com</Link> any day of the week, or visit any of the links below for my socials!</Heading>
-            <HStack>
-                <Icon as={FaGithub} color="white" data-url="https://github.com/leandro-da-souza" boxSize={{base: 39, lg: 50}} onClick={handleClick} cursor="pointer"/>
-                <Icon as={FaLinkedin} color="white" data-url="https://linkedin.com/in/leandro-da-souza" boxSize={{base: 37, lg: 50}} onClick={handleClick} cursor="pointer"/>
-            </HStack>
+        <Flex as="main" minH={{ base: 'auto', md: 'calc(100vh - 65px)' }} justify="center" align="center" px={{ base: 4, sm: 5, md: 8 }} py={{ base: 10, md: 16 }}>
+            <Stack maxW="780px" spacing="7" textAlign="center" align="center">
+                <Text color="teal.600" fontWeight="700">Contact</Text>
+                <Heading as="h1" fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }} lineHeight="1.1">
+                    Have a project, role or idea worth talking through?
+                </Heading>
+                <Text color="gray.600" fontSize={{ base: 'md', md: 'lg' }} lineHeight="1.8">
+                    I am reachable at <Link color="teal.600" href="mailto:dasouza.leandro@gmail.com" wordBreak="break-word">dasouza.leandro@gmail.com</Link>. You can also find me on GitHub and LinkedIn.
+                </Text>
+                <Stack direction={{ base: 'column', sm: 'row' }} spacing="4" justify="center" w="100%">
+                    <Button as={Link} href="mailto:dasouza.leandro@gmail.com" colorScheme="teal" size={{ base: 'md', md: 'lg' }} w={{ base: '100%', sm: 'auto' }}>
+                        Email Me
+                    </Button>
+                    <Button as={Link} href="https://github.com/leandro-da-souza" isExternal leftIcon={<FaGithub />} variant="outline" size={{ base: 'md', md: 'lg' }} w={{ base: '100%', sm: 'auto' }}>
+                        GitHub
+                    </Button>
+                    <Button as={Link} href="https://linkedin.com/in/leandro-da-souza" isExternal leftIcon={<FaLinkedin />} variant="outline" size={{ base: 'md', md: 'lg' }} w={{ base: '100%', sm: 'auto' }}>
+                        LinkedIn
+                    </Button>
+                </Stack>
+            </Stack>
         </Flex>
     )
 }

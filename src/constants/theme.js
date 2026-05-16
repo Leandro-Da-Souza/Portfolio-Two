@@ -1,25 +1,33 @@
 import { extendTheme } from "@chakra-ui/react";
-import { mode } from "@chakra-ui/theme-tools";
 
 
 const styles = {
-    global: props => ({
-      body: {
-        color: mode('red.500', 'custom.hackerGreen')(props),
-        bg: mode('custom.blue', 'black')(props),
+    global: {
+      "html, body, #root": {
+        minHeight: "100%",
       },
-    }),
+      body: {
+        color: 'gray.800',
+        bg: 'gray.50',
+        overflowX: "hidden",
+      },
+      "::selection": {
+        backgroundColor: 'teal.100',
+        color: 'gray.900',
+      },
+    },
   };
 
 const theme = extendTheme({
     fonts: {
-        body: 'JetBrains Mono',
-        heading: 'JetBrains Mono'
+        body: 'JetBrains Mono, monospace',
+        heading: 'JetBrains Mono, monospace'
     },
     colors: {
         custom: {
             blue: '#004151',
-            hackerGreen: '#33FF33'
+            ink: '#0D1117',
+            paper: '#F7FAFC'
         }
     },
     styles,
